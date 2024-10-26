@@ -1,0 +1,184 @@
+/* Estilos generales */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #580a58;
+    background: url(../../img/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4 50%, #fbc2eb 75%, #a18cd1);
+    padding: 10px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
+.header__logo-img {
+    border-radius: 50%;
+}
+
+.header__nav {
+    margin-top: 20px;
+}
+
+.header__nav-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header__nav-item {
+    display: inline;
+}
+
+.header__nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Slider */
+.slider-frame {
+    width: 70%;
+    max-width: 700px;
+    margin: 50px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    height: auto;
+    display: block;
+}
+
+.slider__list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 400%;
+    transition: transform 1s ease-in-out;
+    animation: slide 16s infinite ease-in-out;
+}
+
+.slider__item {
+    list-style: none;
+    flex: 0 0 100%;
+    box-sizing: border-box;
+}
+
+.slider__img {
+    width: 30%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+@keyframes slide {
+
+    0%,
+    20% {
+        transform: translateX(0);
+    }
+
+    25%,
+    45% {
+        transform: translateX(-100%);
+    }
+
+    50%,
+    70% {
+        transform: translateX(-200%);
+    }
+
+    75%,
+    100% {
+        transform: translateX(-300%);
+    }
+}
+
+/*seccion InputMail*/
+.inputmail {
+    display: row;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+/* Sección frases */
+.cuadro-inferior {
+    background-color: #fbc2eb;
+    margin: 15px 20px 25px 30px;
+    padding: 30px 25px 20px 15px;
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Pilares */
+.pilares {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.pilar {
+    background-color: #eee0f8;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(57, 30, 58, 0.1);
+}
+
+/* Títulos */
+.section__title {
+    font-family: 'Lato';
+    font-style: italic;
+    text-align: center;
+    color: #580a58;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    color: #cda3cd;
+    padding: 20px;
+    background-color: #580a58;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .slider-frame {
+        width: 100%;
+    }
+
+    .header__nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pilares {
+        flex-direction: column;
+    }
+
+    .pilar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
