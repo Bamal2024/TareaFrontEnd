@@ -32,7 +32,7 @@
     </header>
 
     <!-- Contenido principal -->
-    <main class="content">
+    <main class="main">
         <!-- Sección 1: Slider de imágenes -->
         <section id="seccion1" class="section section--slider">
             <h2 class="section__title">Llamas de Inspiración</h2>
@@ -63,7 +63,7 @@
 
         <!-- Sección InputMail -->
         <section class="inputmail">
-            <h2>¡Ingresa tu email para suscribirte a nuestra lista de correo!</h2>
+            <h2 class="inputmail__texto">¡Ingresa tu email para suscribirte a nuestra lista de correo!</h2>
             <form>
                 <label for="email">E-Mail</label>
                 <input type="email" id="email" name="email" placeholder="nombre@gmail.com" required />
@@ -73,12 +73,15 @@
 
 
         <!-- Sección de frases -->
-        <section class="section section--frases cuadro-inferior">
-            <h2 class="section__title">Frases para iluminar tu día</h2>
-            <p class="quote">El brillo que buscas afuera ya vive dentro de ti.</p>
-            <p class="quote">La paz comienza en tu interior, y de ahí se expande al mundo.</p>
-            <p class="quote">Cada día es una nueva oportunidad para ser tu mejor versión.</p>
-        </section>
+        <div class="section--frases">
+            <section class="section  cuadro-inferior">
+                <h2 class="section__title">Frases para iluminar tu día</h2>
+                <p class="quote">El brillo que buscas afuera ya vive dentro de ti.</p>
+                <p class="quote">La paz comienza en tu interior, y de ahí se expande al mundo.</p>
+                <p class="quote">Cada día es una nueva oportunidad para ser tu mejor versión.</p>
+            </section>
+        </div>
+
 
         <!-- Sección 2: Claves del Bienestar -->
         <section id="seccion2" class="section section--bienestar">
