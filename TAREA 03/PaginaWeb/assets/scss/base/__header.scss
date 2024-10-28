@@ -1,0 +1,43 @@
+.header {
+    background: $background-color;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__logo {
+        font-size: 24px;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    &__logo-img {
+        border-radius: 50%;
+    }
+
+    &__nav {
+        margin-top: 20px;
+    }
+
+    &__nav-list {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+    }
+
+    &__nav-item {
+        display: inline;
+
+    }
+
+    &__nav-link {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+}

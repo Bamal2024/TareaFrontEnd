@@ -9,7 +9,7 @@ body {
     margin: 0;
     padding: 0;
     color: $base-color;
-    background: url(../../img/fondo.jpg);
+    background-color: #f8def1;
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -17,119 +17,9 @@ body {
     grid-template-rows: 2fr 3fr 1fr 1fr 1fr 0.5fr;
     grid-template-columns: 1fr;
 
-
-    .header {
-        background: $background-color;
-        padding: 10px;
-        text-align: center;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        .header__logo {
-            font-size: 24px;
-            font-weight: bold;
-            font-style: italic;
-        }
-
-        .header__logo-img {
-            border-radius: 50%;
-        }
-
-        .header__nav {
-            margin-top: 20px;
-        }
-
-        .header__nav-list {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-
-        }
-
-        .header__nav-item {
-            display: inline;
-
-        }
-
-        .header__nav-link {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-
-    }
-
-    ////seccion InputMail///
-    .inputmail {
-        display: flex;
-        padding: 0;
-        margin: 0;
-        text-align: center;
-        flex-direction: column;
-
-    }
-
-    //// Sección frases ////
-
-    .section--frases {
-        display: flex;
-        justify-content: center;
-    }
-
-
-    .cuadro-inferior {
-        background-color: pink;
-        margin: 15px 20px 25px 30px;
-        padding: 30px 25px 20px 15px;
-        font-family: 'Lato', sans-serif;
-        font-style: italic;
-        text-align: center;
-        border-radius: 10px;
-    }
-
-    //// Pilares ////
-    .pilares {
-        display: flex;
-        justify-content: space-around;
-        padding: 20px;
-        grid-row: 5/6;
-    }
-
-    .pilar {
-        background-color: #eee0f8;
-        padding: 20px;
-        border-radius: 10px;
-        width: 30%;
-        text-align: center;
-        box-shadow: 0px 4px 6px rgba(57, 30, 58, 0.1);
-    }
-
-    //// Títulos ////
-    .section__title {
-        font-family: 'Lato';
-        font-style: italic;
-        text-align: center;
-        color: $base-color;
-    }
-
-    //// Footer ////
-    .footer {
-        text-align: center;
-        color: #cda3cd;
-        padding: 20px;
-        background-color: $base-color;
-
-    }
-
 }
 
 /// Media Queries para responsividad ////
-
 /// Estilos para celular ///
 @media (max-width: 767px) {
     .slider-frame {
@@ -179,8 +69,6 @@ body {
         }
 
     }
-
-
 
 }
 

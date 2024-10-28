@@ -7,13 +7,9 @@ body {
   background-size: cover;
   background-position: center;
   height: 100vh;
-  /* 
-  .main {
-      display: grid;
-      grid-template-rows: auto auto 1fr;
-      grid-template-columns: 1fr;
-      grid-row: 2/3;
-  } */
+  display: grid;
+  grid-template-rows: 2fr 3fr 1fr 1fr 1fr 0.5fr;
+  grid-template-columns: 1fr;
 }
 body .header {
   background: linear-gradient(to bottom, #ff9a9e, #fad0c4 50%, #fbc2eb 75%, #a18cd1);
@@ -51,13 +47,18 @@ body .header .header__nav-link {
   font-weight: bold;
 }
 body .inputmail {
-  display: row;
+  display: flex;
   padding: 0;
   margin: 0;
   text-align: center;
+  flex-direction: column;
+}
+body .section--frases {
+  display: flex;
+  justify-content: center;
 }
 body .cuadro-inferior {
-  background-color: red;
+  background-color: pink;
   margin: 15px 20px 25px 30px;
   padding: 30px 25px 20px 15px;
   font-family: "Lato", sans-serif;
@@ -69,6 +70,7 @@ body .pilares {
   display: flex;
   justify-content: space-around;
   padding: 20px;
+  grid-row: 5/6;
 }
 body .pilar {
   background-color: #eee0f8;
@@ -84,27 +86,6 @@ body .section__title {
   text-align: center;
   color: #580a58;
 }
-@media (max-width: 768px) {
-  body .slider-frame {
-    width: 100%;
-  }
-  body .header__nav-list {
-    flex-direction: column;
-    gap: 10px;
-  }
-  body .pilares {
-    flex-direction: column;
-  }
-  body .pilar {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
-@media (min-width: 480px) {
-  body .slider-frame {
-    width: 80%;
-  }
-}
 body .footer {
   text-align: center;
   color: #cda3cd;
@@ -112,6 +93,52 @@ body .footer {
   background-color: #580a58;
 }
 
+@media (max-width: 767px) {
+  .slider-frame {
+    width: 100%;
+  }
+  .header__nav-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .pilares {
+    flex-direction: column;
+    align-items: center;
+    width: 700px;
+  }
+  .cuadro-inferior {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 15px 200px 25px 200px;
+  }
+  .pilar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  body {
+    grid-auto-flow: row;
+    align-items: start;
+    gap: 10px;
+  }
+  .inputmail {
+    display: flex;
+    flex-direction: column;
+  }
+  .inputmail__texto {
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-wrap: nowrap;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .slider-frame {
+    width: 80%;
+  }
+}
 .slider-frame {
   width: 70%;
   max-width: 700px;
@@ -121,7 +148,6 @@ body .footer {
   position: relative;
   height: auto;
   display: block;
-  grid-row: 2/3;
 }
 
 .slider__list {
