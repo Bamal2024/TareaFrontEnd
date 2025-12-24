@@ -1,0 +1,49 @@
+# GitHub Actions workflow for dummy deployments to test Jira Cloud integration
+# This workflow creates GitHub Deployments on push to main or manual trigger
+# It uses dummy deployment actions to generate events visible in Jira's Deployments panel
+
+name: Deploy
+
+# Triggers: push to main branch or manual dispatch
+on:
+  push:
+    branches: [ main ]  # Change to 'ramab' if your default branch is ramab
+  workflow_dispatch:
+    inputs:
+      test_only:
+        description: 'Skip real deploy logic (always true for dummy deployment)'
+        required: false
+        default: 'true'
+        type: boolean
+
+# Permissions required for creating and updating deployments
+permissions:
+  deployments: write
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Create a GitHub Deployment (dummy, no real deployment)
+      - name: Create Deployment
+        id: create-deployment  # ID to reference outputs
+        uses: chrnorm/deployment-action@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          environment: production  # Fake environment name
+          environment-url: https://example.com  # Fake URL for testing
+          ref: ${{ github.sha }}  # Reference the commit SHA
+
+      # Mark the deployment as successful
+      - name: Update Deployment Status
+        uses: chrnorm/deployment-status@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          state: success  # Mark as successful
+          deployment-id: ${{ steps.create-deployment.outputs.deployment-id }}  # Reference the created deployment
